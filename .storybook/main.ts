@@ -8,10 +8,9 @@ const config = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "storybook-addon-nuxt",
   ],
   framework: {
-    name: "@storybook/vue3-vite",
+    name: "@storybook-vue/nuxt",
     options: {},
   },
   docs: {

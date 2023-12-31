@@ -1,16 +1,39 @@
-import { type StoryFn } from "@storybook/vue3";
-import BaseButton from "./BaseButton.vue";
+import BaseButton, { type ButtonProps } from "./BaseButton.vue";
+import type { Meta, StoryObj } from "@storybook/vue3";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
-export default {
-  title: "Base/Button",
+type Story = StoryObj<typeof BaseButton>;
+
+const meta: Meta<typeof BaseButton> = {
+  title: "BaseButton",
   component: BaseButton,
+  render: (args) => ({
+    components: { BaseButton },
+    setup() {
+      return { args };
+    },
+    template: "<BaseButton v-bind='args' />",
+  }),
+  args: {
+    variant: "primary",
+    disabled: false,
+    size: "medium",
+  },
+  argTypes: {
+    variant: {
+      control: {
+        type: "select",
+      },
+      options: ["primary", "secondary", "tertiary"],
+    },
+    size: {
+      control: {
+        type: "select",
+      },
+      options: ["xsmall", "small", "medium", "large"],
+    },
+  },
 };
 
-const Template: StoryFn<typeof BaseButton> = () => ({
-  components: { BaseButton },
-  template: "<BaseButton />",
-});
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-Default.storyName = "Base Button";
+export default meta;

@@ -12,6 +12,8 @@
     "build-storybook": "storybook build"
   },
   "devDependencies": {
+    "@nuxtjs/storybook": "^7.0.0",
+    "@storybook-vue/nuxt": "^0.2.0",
     "@storybook/addon-essentials": "^7.6.6",
     "@storybook/addon-interactions": "^7.6.6",
     "@storybook/addon-links": "^7.6.6",
@@ -28,5 +30,9 @@
     "tailwindcss": "^3.4.0",
     "vue": "^3.4.0",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "tailwind-merge": "^2.2.0"
   }
 }
