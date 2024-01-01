@@ -1,10 +1,10 @@
-import BaseButton, { type ButtonProps } from "./BaseButton.vue";
+import BaseButton from "./BaseButton.vue";
 import type { Meta, StoryObj } from "@storybook/vue3";
 
 type Story = StoryObj<typeof BaseButton>;
 
 const meta: Meta<typeof BaseButton> = {
-  title: "BaseButton",
+  title: "Elements/BaseButton",
   component: BaseButton,
   render: (args) => ({
     components: { BaseButton },

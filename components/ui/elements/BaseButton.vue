@@ -8,7 +8,7 @@ const button = cva(
     variants: {
       variant: {
         primary:
-          "border border-black bg-blue-900 hover:bg-blue-1000 active:bg-blue-1100 focus:outline-none focus:ring focus:ring-yellow-700 text-white disabled:opacity-30 disabled:border-0 disabled:bg-black disabled:text-gray-420",
+          "border border-black bg-blue-900 hover:bg-blue-1000 active:bg-blue-1100 focus:outline-none focus:ring focus:ring-yellow-700 text-white disabled:opacity-30 disabled:border-0 disabled:bg-black disabled:text-gray-420 disabled:cursor-not-allowed",
         secondary: "secondary",
         tertiary: "tertiary",
       },
